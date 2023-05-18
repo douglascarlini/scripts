@@ -4,7 +4,7 @@ global cleanSize
 global appName
 
 set userHomePath to POSIX path of (path to home folder) as text
-set userCachePath to userHomePath & "/Library/Caches"
+set userCachePath to userHomePath & "Library/Caches"
 set appName to "Limpeza de disco"
 
 tell application "System Events"
@@ -24,7 +24,7 @@ set buttonResponse to button returned of ageDialog
 if buttonResponse is equal to "Cancelar" then
 	func1()
 else
-	func2(cleanSize, userCachePath)
+	func2()
 end if
 
 on func1()
